@@ -1,12 +1,10 @@
 import React, { useState,useEffect,useCallback} from 'react';
 import {useSelector , useDispatch} from 'react-redux';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View,TextInput, Alert,FlatList, KeyboardAvoidingView} from 'react-native';
+import {  StyleSheet, Text, View,TextInput, Alert,FlatList, KeyboardAvoidingView} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Button,Icon } from 'react-native-elements';
 import * as userProfileActions from '../store/actions/userprofile';
-// import * as WebBrowser from 'expo-web-browser';
 
-import { MonoText } from '../components/StyledText';
 
 const HomeScreen = props=> {
   const userprofiles =  useSelector(state=> state.userprofile.userProfiles);

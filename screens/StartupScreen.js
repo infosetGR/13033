@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react';
 import {
   View,
-  ActivityIndicator,
-  StyleSheet, Text,TouchableOpacity,Linking,Image, AsyncStorage,Alert, ImageBackground
+  StyleSheet, Text,TouchableOpacity,Linking, ImageBackground
 } from 'react-native';
 import { useDispatch } from 'react-redux';
 import {Share } from "react-native";
 import * as userProfileActions from '../store/actions/userprofile';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Button } from 'react-native-elements';
 
 

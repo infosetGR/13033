@@ -1,9 +1,7 @@
 import React,{useCallback,useState,useEffect} from 'react';
 import { StyleSheet, Text, View, Alert } from 'react-native';
-import {useSelector , useDispatch} from 'react-redux';
-import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import {useSelector} from 'react-redux';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Button } from 'react-native-elements';
 import * as SMS from 'expo-sms';
 
@@ -33,10 +31,8 @@ const LinksScreen = props=> {
     // }
   },[checkprofile]);
 
-const proceed = (v) => {
+const proceed = async (v) => {
   if (checkprofile()){
-  Alert.alert('Συνέχεια με την αποστολή SMS?', 'Επιλέχθηκε η μετακίνηση '+ v, [
-    { text: 'Yes', style: 'default', onPress: async ()=> {
       const isAvailable = await SMS.isAvailableAsync();
       if (isAvailable) {
         const { result } = await SMS.sendSMSAsync(
@@ -49,9 +45,8 @@ const proceed = (v) => {
       }
 
 
-    } },
-    { text: 'No', style: 'default', onPress: ()=> {}  }   ]);
-  }
+    } 
+  
     return;    
 
   };
