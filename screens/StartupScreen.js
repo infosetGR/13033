@@ -83,13 +83,13 @@ const StartupScreen = props => {
        );
        if (result.action === Share.sharedAction) {
          if (result.activityType) {
-           console.log('shared with activity type of '+ result.activityType);
+          //  console.log('shared with activity type of '+ result.activityType);
          } else {
-           console.log('shared');
+          //  console.log('shared');
          }
              
        } else if (result.action === Share.dismissedAction) {
-           Console.log('dismissed');
+          //  Console.log('dismissed');
        }
        
    
@@ -98,8 +98,8 @@ const StartupScreen = props => {
    <View style={{width:'100%',height:200, alignSelf:'center', alignItems:'center', alignContent:'center'}}>
    <ImageBackground   source={require("../assets/images/icon.png")}
          resizeMode='contain'
-         style={{width:'100%',height:150}}>
-           <View style={{width:'100%',height:150,top:-70}}>
+         style={{width:'100%',height:150,top:40}}>
+           <View style={{width:'100%',height:10,top:-55}}>
       <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center', color:'#527a42'}}>Μοιραστείτε την εφαρμογή με φίλους </Text>
       <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center',color:'#527a42'}}> </Text>
       </View>
@@ -130,7 +130,7 @@ const StartupScreen = props => {
     </View> */}
 
     <Text> </Text>
-<TouchableOpacity  onPress={()=>Linking.openURL(`mailto:fotisss@gmail.com?subject=Επικοινωνία για την εφαρμογή Μένουμε Σπίτι`)} style={{padding:10, }}>
+<TouchableOpacity  onPress={()=>Linking.openURL(`mailto:fotis@infoset.co?subject=Επικοινωνία για την εφαρμογή Μένουμε Σπίτι`)} style={{padding:10, }}>
 
       <Text style={{fontFamily:'futurabold', color:'#527a42'}}>13033 2.0</Text>
       <Text  style={{fontFamily:'futurabold', color:'#527a42'}}>Προτάσεις/σχόλια: Φώτιος Σταθόπουλος (fotisss@gmail.com)</Text>

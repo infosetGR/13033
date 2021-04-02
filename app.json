@@ -3,7 +3,6 @@
     "name": "13033",
     "slug": "13033",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"
@@ -24,19 +23,18 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier":"co.infoset.sms13033",
+      "bundleIdentifier": "co.infoset.sms13033",
       "supportsTablet": true,
-      "buildNumber":"1.2.0"
+      "buildNumber": "1.2.0"
     },
-    "android":{
-      "package":"co.infoset.sms13033",
-      "versionCode":3,
-      "adaptiveIcon":{
-      "foregroundImage":"./assets/images/icon.png",
-      "backgroundColor": "#ffffff"
+    "android": {
+      "package": "co.infoset.sms13033",
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#ffffff"
       },
-      "permissions": [     
-      ]
+      "permissions": []
     }
-}
+  }
 }
