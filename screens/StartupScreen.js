@@ -34,7 +34,7 @@ const StartupScreen = props => {
     <View style={{width:'90%', alignSelf:'center',margin:10, flex:1}}>
     <TouchableOpacity onPress={()=>{props.navigation.navigate('Home');}}>
       <View style={{backgroundColor:'#EEE', borderRadius:20, paddingHorizontal:10, margin:10, shadowColor: "#000", shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 8, elevation: 14,}}>
-      <Text style={{fontSize:16, fontFamily:'futura'}}>Καλωσήρθατε. H εφαρμογή αυτή στέλνει εύκολα για εσάς και τους οικείους σας sms στο {"\n"} - 13032: Μετακίνηση σε κατάστημα {"\n"} - 13032: Άδεια εξόδου από το σπίτι {"\n"} {"\n"} Συμπληρώστε τα στοιχεία σας στην επόμενη οθόνη και επιλέξτε το λόγο
+      <Text style={{fontSize:16, fontFamily:'futura'}}>Καλωσήρθατε. H εφαρμογή αυτή στέλνει εύκολα για εσάς και τους οικείους σας sms στο {"\n"} - 13032: Μετακίνηση σε κατάστημα {"\n"} - 13033: Άδεια εξόδου από το σπίτι {"\n"} {"\n"} Συμπληρώστε τα στοιχεία σας στην επόμενη οθόνη και επιλέξτε το λόγο
         που θέλετε να μετακινηθείτε. Τέλος αναμείνετε το απαντητικό sms απο την υπηρεσία.
         </Text>
         </View>
@@ -96,11 +96,11 @@ const StartupScreen = props => {
 
  }} >
    <View style={{width:'100%',height:200, alignSelf:'center', alignItems:'center', alignContent:'center'}}>
-   <ImageBackground   source={require("../assets/images/icon.png")}
+   <ImageBackground   source={require("../assets/images/icon2.png")}
          resizeMode='contain'
          style={{width:'100%',height:150,top:40}}>
            <View style={{width:'100%',height:10,top:-55}}>
-      <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center', color:'#527a42'}}>Μοιραστείτε την εφαρμογή με φίλους </Text>
+      <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center', color:'#527a42'}}> Μοιραστείτε την εφαρμογή με φίλους </Text>
       <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center',color:'#527a42'}}> </Text>
       </View>
 

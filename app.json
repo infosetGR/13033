@@ -7,12 +7,12 @@
       "ios",
       "android"
     ],
-    "version": "1.2.0",
+    "version": "2.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icon2.png",
     "scheme": "myapp",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,13 +25,13 @@
     "ios": {
       "bundleIdentifier": "co.infoset.sms13033",
       "supportsTablet": true,
-      "buildNumber": "1.2.0"
+      "buildNumber": "2.0.0"
     },
     "android": {
       "package": "co.infoset.sms13033",
       "versionCode": 3,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icon.png",
+        "foregroundImage": "./assets/images/icon2.png",
         "backgroundColor": "#ffffff"
       },
       "permissions": []
