@@ -63,7 +63,7 @@ const HomeScreen = props=> {
    name="add"
    size={45}
    color="#527a42" onPress={()=>{
-    Alert.alert('Νεο προφίλ?', 'Θέλεται να δημιουργήσετε επιπλέον προφίλ? Μπορείτε να επιλέγεται για ποιό προφίλ θα αιτήστε άδεια εξόδου.',[
+    Alert.alert('Νεο προφίλ?', 'Θέλετε να δημιουργήσετε επιπλέον προφίλ? Μπορείτε να επιλέγετε για ποιό προφίλ θα αιτήστε άδεια εξόδου.',[
       { text: 'Ναι!', style: 'default', onPress: async ()=> {await dispatch(userProfileActions.saveUserProfile(-1,'','','','','',''));
        setUserid(userprofiles.length);
       setName('');
@@ -82,7 +82,7 @@ const HomeScreen = props=> {
    name="clear" type='material'
    size={25}
    color="#527a42" onPress={()=>{
-    Alert.alert('Διαγραφή ?', 'Θέλεται να διαγράψεται όλα τα προφιλ που έχετε δημιουργήσει?',[
+    Alert.alert('Διαγραφή ?', 'Θέλετε να διαγράψετε όλα τα προφιλ που έχετε δημιουργήσει?',[
       { text: 'Ναι!', style: 'default', onPress: async ()=> {await dispatch(userProfileActions.deleteAllProfiles());      
          setUserid(0);
       setName('');

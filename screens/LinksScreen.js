@@ -34,13 +34,27 @@ const LinksScreen = props=> {
 const proceed = async (v) => {
   if (checkprofile()){
       const isAvailable = await SMS.isAvailableAsync();
+     
+
       if (isAvailable) {
-        const { result } = await SMS.sendSMSAsync(
-          ['13033'],
-          v+' '+ userprofile.name.toUpperCase() +' '+userprofile.surname.toUpperCase()+' '+ userprofile.street.toUpperCase()+' '+userprofile.number.toUpperCase()+' '+userprofile.city.toUpperCase()+' '+userprofile.postcode.toUpperCase()
-        );
-        Alert.alert('SMS to 13033',result+(activeuserid>0?'. Αν δεν μετακινηθείτε εσείς πρωωθήστε το μύνημα που θα λάβατε απο το 13033 στο άτομο που θα μετακινηθεί':'. Μπορείτε να μετακινηθείτε όταν λάβετε το απαντητικό μύνημα απο το 13033'))
-      } else {
+        if (v==0)
+        {
+          const { result } = await SMS.sendSMSAsync(
+            ['13032'],
+            userprofile.name.toUpperCase() +' '+userprofile.surname.toUpperCase()
+          );
+          Alert.alert('SMS to 13032',result+(activeuserid>0?'. Αν δεν μετακινηθείτε εσείς πρωωθήστε το μύνημα που θα λάβατε απο το 13032 στο άτομο που θα μετακινηθεί':'. Μπορείτε να μετακινηθείτε όταν λάβετε το απαντητικό μύνημα απο το 13032'))
+
+        }
+        else
+        {
+          const { result } = await SMS.sendSMSAsync(
+            ['13033'],
+            v+' '+ userprofile.name.toUpperCase() +' '+userprofile.surname.toUpperCase()+' '+ userprofile.street.toUpperCase()+' '+userprofile.number.toUpperCase()+' '+userprofile.city.toUpperCase()+' '+userprofile.postcode.toUpperCase()
+          );
+          Alert.alert('SMS to 13033',result+(activeuserid>0?'. Αν δεν μετακινηθείτε εσείς πρωωθήστε το μύνημα που θα λάβατε απο το 13033 στο άτομο που θα μετακινηθεί':'. Μπορείτε να μετακινηθείτε όταν λάβετε το απαντητικό μύνημα απο το 13033'))
+        }
+            } else {
         Alert.alert('Error', 'You cannot send sms from this device');
       }
 
@@ -51,13 +65,20 @@ const proceed = async (v) => {
 
   };
 
+  
   return (
 
 
     <ScrollView>
       
-    <View style={{alignItems:'center',backgroundColor:'#FFF',  alignSelf:'center', flex:1, minHeight:1000, width:'98%', padding:20,justifyContent:'space-evenly'}}>
+    <View style={{alignItems:'center',backgroundColor:'#FFF',  alignSelf:'center', flex:1, minHeight:900, width:'98%', padding:5,justifyContent:'space-evenly'}}>
     <Text style={{fontFamily:'futura'}}>{userprofile.name.toUpperCase()} {userprofile.surname.toUpperCase()} {userprofile.street.toUpperCase()} {userprofile.number.toUpperCase()} {userprofile.city.toUpperCase()} {userprofile.postcode.toUpperCase()}</Text>
+    <Button title={'13032: Μετάβαση σε εμπορικό κατάστημα.'} 
+    buttonStyle={{shadowColor: "#000",padding:30, shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 6, elevation: 10, minWidth:150,backgroundColor:'#999', justifyContent:'space-evenly', borderRadius: 10}} 
+    titleStyle={{fontFamily:'futura',  }}
+    onPress={()=>{setReason(0);proceed(0);}}/>        
+    
+
     <Button title={'1. Μετάβαση σε φαρμακείο ή επίσκεψη στον γιατρό, εφόσον αυτό συνιστάται μετά από σχετική επικοινωνία.'} 
     buttonStyle={{shadowColor: "#000", shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 6, elevation: 10, minWidth:150,backgroundColor:'#ff0066', justifyContent:'space-evenly', borderRadius: 10}} 
     titleStyle={{fontFamily:'futura',  }}
@@ -70,7 +91,7 @@ const proceed = async (v) => {
     buttonStyle={{shadowColor: "#000", shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 6, elevation: 10, minWidth:150,backgroundColor:'#bf00ff', justifyContent:'space-evenly', borderRadius: 10}} 
     titleStyle={{fontFamily:'futura',  }}
     onPress={()=>{setReason(3);proceed(3);}}/>        
-    <Button title={'4. Κίνηση για παροχή βοήθειας σε ανθρώπους που βρίσκονται σε ανάγκη.'} 
+    <Button title={'4. Κίνηση για παροχή βοήθειας σε ανθρώπους που βρίσκονται σε ανάγκη ή συνοδεία ανηλίκων μαθητών από/προς το σχολείο.'} 
     buttonStyle={{shadowColor: "#000", shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 6, elevation: 10, minWidth:150,backgroundColor:'#ff8000', justifyContent:'space-evenly', borderRadius: 10}} 
     titleStyle={{fontFamily:'futura',  }}
     onPress={()=>{setReason(4);proceed(4);}}/>   

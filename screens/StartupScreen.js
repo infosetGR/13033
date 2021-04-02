@@ -34,8 +34,7 @@ const StartupScreen = props => {
     <View style={{width:'90%', alignSelf:'center',margin:10, flex:1}}>
     <TouchableOpacity onPress={()=>{props.navigation.navigate('Home');}}>
       <View style={{backgroundColor:'#EEE', borderRadius:20, paddingHorizontal:10, margin:10, shadowColor: "#000", shadowOffset: {width: 0,height: 4,},shadowOpacity: 0.41,shadowRadius: 8, elevation: 14,}}>
-      <Text style={{fontSize:16, fontFamily:'futura'}}>Καλωσήρθατε. H εφαρμογή αυτή στέλνει εύκολα για εσάς και τους οικείου σας sms στο 13033 
-        για να λαμβάνετε άδεια εξόδου από το σπίτι. Συμπληρώστε τα στοιχεία σας στην επόμενη οθόνη και επιλέξτε το λόγο
+      <Text style={{fontSize:16, fontFamily:'futura'}}>Καλωσήρθατε. H εφαρμογή αυτή στέλνει εύκολα για εσάς και τους οικείους σας sms στο {"\n"} - 13032: Μετακίνηση σε κατάστημα {"\n"} - 13032: Άδεια εξόδου από το σπίτι {"\n"} {"\n"} Συμπληρώστε τα στοιχεία σας στην επόμενη οθόνη και επιλέξτε το λόγο
         που θέλετε να μετακινηθείτε. Τέλος αναμείνετε το απαντητικό sms απο την υπηρεσία.
         </Text>
         </View>
@@ -102,7 +101,7 @@ const StartupScreen = props => {
          style={{width:'100%',height:150}}>
            <View style={{width:'100%',height:150,top:-70}}>
       <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center', color:'#527a42'}}>Μοιραστείτε την εφαρμογή με φίλους </Text>
-      <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center',color:'#527a42'}}>(iOS & Android)</Text>
+      <Text style={{top:40,fontFamily:'futurabold', alignSelf:'center',color:'#527a42'}}> </Text>
       </View>
 
  </ImageBackground>
@@ -133,7 +132,7 @@ const StartupScreen = props => {
     <Text> </Text>
 <TouchableOpacity  onPress={()=>Linking.openURL(`mailto:fotisss@gmail.com?subject=Επικοινωνία για την εφαρμογή Μένουμε Σπίτι`)} style={{padding:10, }}>
 
-      <Text style={{fontFamily:'futurabold', color:'#527a42'}}>13033 1.0</Text>
+      <Text style={{fontFamily:'futurabold', color:'#527a42'}}>13033 2.0</Text>
       <Text  style={{fontFamily:'futurabold', color:'#527a42'}}>Προτάσεις/σχόλια: Φώτιος Σταθόπουλος (fotisss@gmail.com)</Text>
       
 </TouchableOpacity>
