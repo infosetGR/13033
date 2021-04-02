@@ -1,0 +1,9 @@
+
+node_modules__react-native-elements__src__buttons__Button.js => node_modules\react-native-elements\src\buttons\Button.js
+
+
+- npm install
+- npm start
+
+expo build:android -t app-bundle
+expo build:ios
